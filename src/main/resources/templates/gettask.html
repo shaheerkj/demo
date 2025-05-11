@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:if="${task != null}">
+    <h1 th:text="'Task ID: ' + ${task.getId()}"></h1>
+    <h3 th:text="'Status: ' + ${task.getStatus()}"></h3>
+    <h3 th:text="'Description: ' + ${task.getDescription()}"></h3>
+    <h3 th:text="'Created At: ' + ${task.getCreatedAt()}"></h3>
+    <h3 th:text="'Updated At: ' + ${task.getUpdatedAt()}"></h3>
+</div>
+<div th:unless="${task != null}">
+    <h1>TASK NOT FOUND</h1>
+</div>
+
+
+</body>
+</html>
